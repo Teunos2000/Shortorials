@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --dark-blue: #1E2C3E;
+    --gold-yellow: #D3AA55;
+    --off-white: #FFFCFF;
+    --grey: #3F4144;
+    --light-black: #222331;
+}
+
+.bg-darkblue {
+    background: var(--dark-blue);
+}
+
+.bg-lightblack {
+    background: var(--light-black);
+}
+
+.text-darkblue {
+    color: var(--dark-blue);
+}
+
+.text-lightblack {
+    color: var(--light-black);
+}
+
+.text-gold {
+    color: var(--gold-yellow);
+}
+
+/* Add this to your existing CSS file or create a new one */
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: #1f1f1f;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 2rem;
+}
+
+.mobile-menu a {
+    color: red;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.close-btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+
+
+

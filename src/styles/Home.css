@@ -1,0 +1,40 @@
+/* Home.css */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Temple Image Animation */
+
+/*!* Apply the animation to the temple image *!*/
+/*.temple {*/
+/*    width: 56rem;*/
+/*    animation: templeMove 0.2s linear infinite alternate; !* Adjust the duration and timing function as needed *!*/
+/*}*/
+
+@media (max-width: 850px) {
+    .temple {
+        display: none;
+    }
+}
+
+.object {
+    width: 60rem;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 1940px) {
+    .temple {
+        width: 80rem;
+    }
+}
+
+
+
+/*.animated-image {*/
+/*    transition: transform 0.3s ease-out;*/
+/*}*/
