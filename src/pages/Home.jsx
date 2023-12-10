@@ -6,7 +6,6 @@ import templeImage from '../assets/mountain_with_temple.png';
 import '../styles/Home.css';
 
 const Home = () => {
-
     useEffect(() => {
         document.addEventListener("mousemove", parallax);
 
@@ -18,22 +17,17 @@ const Home = () => {
     function applyParallax(move, e) {
         const movingValue = parseFloat(move.getAttribute("data-value"));
         const boundingRect = move.getBoundingClientRect();
-        const x = (e.clientX - boundingRect.left) * movingValue - boundingRect.width / 5;
+        const x = (e.clientX - boundingRect.left) * movingValue;
+        const y = (e.clientY - boundingRect.top) * movingValue;
 
-        // Adjust the translation based on your requirements
-        const rightEdge = window.innerWidth - boundingRect.width;
-        const bottomEdge = window.innerHeight - boundingRect.height;
+        const offsetXPercentage = 0.02; // Adjust this value to move the image horizontally (percentage of screen width)
+        const offsetYPercentage = 0.02; // Adjust this value to move the image vertically (percentage of screen height)
 
-        const offsetXPercentage = 0.005; // Adjust this value to move the image horizontally (percentage of screen width)
+        const offsetX = window.innerWidth * offsetXPercentage;
+        const offsetY = window.innerHeight * offsetYPercentage;
 
-        // Adjust this value to move the image vertically (percentage of screen height)
-        const offsetYPercentage = -1;
-        const offsetY = bottomEdge * offsetYPercentage;
-
-        move.style.transform = `translateX(${Math.max(0, rightEdge - x) + rightEdge * offsetXPercentage}px) translateY(${Math.max(0, bottomEdge - (e.clientY - boundingRect.top) * movingValue) + offsetY}px)`;
+        move.style.transform = `translate(${Math.max(0, offsetX - x)}px, ${Math.max(0, offsetY - y)}px)`;
     }
-
-
 
     function parallax(e) {
         document.querySelectorAll(".object").forEach((move) => {
@@ -47,7 +41,7 @@ const Home = () => {
             <img
                 src={heroImage}
                 alt="Hero"
-                className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300"
+                className="absolute top-0 left-0 w-full h-full object-cover"
             />
 
             {/* Temple Image */}
@@ -55,7 +49,7 @@ const Home = () => {
                 src={templeImage}
                 alt="Temple"
                 data-value="0.04"
-                className="absolute object bottom-0 left-4 temple"
+                className="absolute object bottom-0 right-0 temple"
             />
 
             {/* Content */}
