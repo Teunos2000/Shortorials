@@ -20,8 +20,8 @@ const Home = () => {
         const x = (e.clientX - boundingRect.left) * movingValue;
         const y = (e.clientY - boundingRect.top) * movingValue;
 
-        const offsetXPercentage = 0.02; // Adjust this value to move the image horizontally (percentage of screen width)
-        const offsetYPercentage = 0.02; // Adjust this value to move the image vertically (percentage of screen height)
+        const offsetXPercentage = 0.02;
+        const offsetYPercentage = 0.02;
 
         const offsetX = window.innerWidth * offsetXPercentage;
         const offsetY = window.innerHeight * offsetYPercentage;
