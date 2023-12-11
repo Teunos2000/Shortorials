@@ -2,6 +2,8 @@
 
 import React, { useEffect } from 'react';
 import heroImage from '../assets/hero3.png';
+import logo from '../assets/logo.svg';
+import search from '../assets/search.svg';
 import templeImage from '../assets/mountain_with_temple.png';
 import '../styles/Home.css';
 
@@ -20,8 +22,8 @@ const Home = () => {
         const x = (e.clientX - boundingRect.left) * movingValue;
         const y = (e.clientY - boundingRect.top) * movingValue;
 
-        const offsetXPercentage = 0.02;
-        const offsetYPercentage = 0.02;
+        const offsetXPercentage = 0.02; // Adjust this value to move the image horizontally (percentage of screen width)
+        const offsetYPercentage = 0.02; // Adjust this value to move the image vertically (percentage of screen height)
 
         const offsetX = window.innerWidth * offsetXPercentage;
         const offsetY = window.innerHeight * offsetYPercentage;
@@ -52,10 +54,30 @@ const Home = () => {
                 className="absolute object bottom-0 right-0 temple"
             />
 
-            {/* Content */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                {/* Your content here */}
+            {/* Content section */}
+            <div className= "flex justify-center items-center">
+
+                {/*Logo*/}
+                <img
+                    src={logo}
+                    alt="Logo"
+                    className="absolute logo"
+                />
+
+                <h1 className="absolute oneliner">Short, no BS video tutorials about all relevant topics</h1>
+
+                {/* Search Bar */}
+                {/*@TODO Add search icon*/}
+                <div className="absolute sb left-1/2 -translate-x-1/2 -translate-y-1/2 p-4">
+                    <input
+                        type="text"
+                        placeholder ="How to edit DPI on Adobe Photoshop......."
+                        className="searchbar p-2"
+                    />
+                </div>
             </div>
+
+
         </div>
     );
 };

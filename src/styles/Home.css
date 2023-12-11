@@ -7,18 +7,12 @@ body {
     overflow: hidden;
 }
 
-/* Temple Image Animation */
-
-/*!* Apply the animation to the temple image *!*/
-/*.temple {*/
-/*    width: 56rem;*/
-/*    animation: templeMove 0.2s linear infinite alternate; !* Adjust the duration and timing function as needed *!*/
-/*}*/
-
-@media (max-width: 850px) {
-    .temple {
-        display: none;
-    }
+:root {
+    --dark-blue: #1E2C3E;
+    --gold-yellow: #D3AA55;
+    --off-white: #FFFCFF;
+    --grey: #3F4144;
+    --light-black: #222331;
 }
 
 .object {
@@ -28,14 +22,51 @@ body {
     right: 0;
 }
 
-@media (min-width: 1940px) {
+.searchbar {
+    width: 45rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    font-weight: 400;
+    font-family: "Noto Sans", sans-serif;
+    color: var(--grey)
+}
+
+.logo {
+    margin-top: 15rem;
+    width: 10rem;
+    height: 10rem;
+}
+
+input.placeholder {
+    background: url("../assets/search.svg");
+}
+
+.sb {
+    margin-top: 60rem;
+}
+
+.oneliner {
+    color: white;
+    font-weight: bold;
+    margin-top: 36rem;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px var(--light-black);
+}
+
+/*Edits voor mobiel: */
+@media (max-width: 850px) {
+    .temple {
+        display: none;
+    }
+
+    .searchbar {
+        width: 20rem;
+    }
+}
+
+/*Edits voor 4k schermen*/
+@media (min-width: 1921px) {
     .temple {
         width: 80rem;
     }
 }
-
-
-
-/*.animated-image {*/
-/*    transition: transform 0.3s ease-out;*/
-/*}*/
