@@ -53,6 +53,35 @@ input.placeholder {
     text-shadow: 2px 2px 4px var(--light-black);
 }
 
+.search-container img {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    color: red;
+}
+
+.icons-row-container {
+    /* Centering and spacing */
+    text-align: center;
+    bottom: 13rem;
+}
+
+.icon {
+    width: 2rem;
+    margin: 0 10px; /* Adjust spacing between icons */
+    opacity: 0.8; /* 80% Opacity */
+}
+
+.description {
+    bottom: 7rem;
+    width: 50%;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
 /*Edits voor mobiel: */
 @media (max-width: 850px) {
     .temple {
@@ -60,7 +89,22 @@ input.placeholder {
     }
 
     .searchbar {
-        width: 20rem;
+        width: 23rem;
+    }
+
+    .oneliner {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .description {
+        bottom: 90px;
+        width: 70%;
+        font-size: 1rem;
+    }
+
+    .icons-row-container {
+        display: none;
     }
 }
 

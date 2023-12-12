@@ -2,6 +2,12 @@
 
 import React, { useEffect } from 'react';
 import heroImage from '../assets/hero3.png';
+import photoshop from '../assets/photoshop.svg';
+import code from '../assets/programming.svg';
+import hammer from '../assets/hammer.svg';
+import after from '../assets/after-effects.svg';
+import premier from '../assets/premiere.svg';
+import computer from '../assets/computer.svg';
 import logo from '../assets/logo.svg';
 import search from '../assets/search.svg';
 import templeImage from '../assets/mountain_with_temple.png';
@@ -64,20 +70,43 @@ const Home = () => {
                     className="absolute logo"
                 />
 
-                <h1 className="absolute oneliner">Short, no BS video tutorials about all relevant topics</h1>
+                <h1 className="absolute oneliner">Short video tutorials about all relevant topics</h1>
 
-                {/* Search Bar */}
-                {/*@TODO Add search icon*/}
+                {/* Search Bar with Icon */}
                 <div className="absolute sb left-1/2 -translate-x-1/2 -translate-y-1/2 p-4">
-                    <input
-                        type="text"
-                        placeholder ="How to edit DPI on Adobe Photoshop......."
-                        className="searchbar p-2"
-                    />
+                    <div className="search-container relative">
+                        <input
+                            type="text"
+                            placeholder="How to edit DPI on Adobe Photoshop......."
+                            className="searchbar pl-11 p-2"
+                        />
+                        <img
+                            src={search}
+                            alt="Search"
+                            className="absolute left-3 top-1/2 transform -translate-y-1/2"
+                        />
+                    </div>
                 </div>
+
+                {/* Icons Row and Description */}
+                <div className="icons-row-container absolute left-0 w-full">
+                    <div className="flex justify-center">
+                        {/* Replace these with your actual icon components or images */}
+                        <img src={photoshop} alt="Photoshop Icon" className="icon" />
+                        <img src={code} alt="Programming icon" className="icon" />
+                        <img src={hammer} alt="Hammer Icon" className="icon" />
+                        <img src={after} alt="After Effects Icon" className="icon" />
+                        <img src={premier} alt="Premier Pro Icon" className="icon" />
+                        <img src={computer} alt="PC Icon" className="icon" />
+                    </div>
+                </div>
+                <p className="absolute text-white text-center description">
+                    Bid farewell to 15-minute YouTube tutorials on basic topics.
+                    Explore our library of brief, to-the-point tutorials, sparing you
+                    from enduring unnecessary 2-minute YouTube intros.
+                    Get straight to the knowledge you seek, minus the time-wasting preamble.
+                </p>
             </div>
-
-
         </div>
     );
 };
