@@ -9,8 +9,7 @@ const Navbar = () => {
     const navLinks = [
         { to: "/", label: "Home" },
         { to: "/about", label: "About" },
-        { to: "/library", label: "Tutorial Library" },
-        // Add more navigation links as needed
+        { to: "/libary", label: "Tutorial Library" },
     ];
 
     const toggleMobileMenu = () => {

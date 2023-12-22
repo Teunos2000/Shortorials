@@ -12,6 +12,7 @@ import logo from '../assets/logo.svg';
 import search from '../assets/search.svg';
 import templeImage from '../assets/mountain_with_temple.png';
 import '../styles/Home.css';
+import Searchbar from "../components/Searchbar.jsx";
 
 const Home = () => {
     useEffect(() => {
@@ -72,20 +73,9 @@ const Home = () => {
 
                 <h1 className="absolute oneliner">Short video tutorials about all relevant topics</h1>
 
-                {/* Search Bar with Icon */}
+                {/* Search Bar */}
                 <div className="absolute sb left-1/2 -translate-x-1/2 -translate-y-1/2 p-4">
-                    <div className="search-container relative">
-                        <input
-                            type="text"
-                            placeholder="How to edit DPI on Adobe Photoshop......."
-                            className="searchbar pl-11 p-2"
-                        />
-                        <img
-                            src={search}
-                            alt="Search"
-                            className="absolute left-3 top-1/2 transform -translate-y-1/2"
-                        />
-                    </div>
+                    <Searchbar />
                 </div>
 
                 {/* Icons Row and Description */}
