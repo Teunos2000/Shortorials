@@ -7,19 +7,29 @@
 
 .custom-container {
     padding-top: 5.5rem;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 22%;
+    padding-right: 22%;
 }
 
 .topresult {
+    font-family: "Noto Sans", sans-serif;
     padding: 10px;
     border-width: 1px;
     border-radius: 12px;
-    border-color: #D3AA55;
     display: flex;
     align-items: flex-start;
-    height: 200px; /* Adjust this value as needed */
-    overflow: hidden; /* Ensures the div does not stretch */
+    height: 15rem;
+}
+
+.goldenborder {
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: #D3AA55;
+}
+
+.topresult .title {
+    font-weight: bold;
+    font-size: 17px;
 }
 
 .topresult .text-content {
@@ -30,6 +40,7 @@
 }
 
 .topresult .video-description {
+    padding-top: 2rem;
     display: -webkit-box;
     -webkit-line-clamp: 8;
     -webkit-box-orient: vertical;
@@ -37,13 +48,26 @@
     text-overflow: ellipsis;
     height: calc(100% - 40px); /* Adjust this value based on other content heights */
     margin-bottom: 10px; /* Adjust or remove as needed */
+    font-size: 13px;
 }
 
 .topresult .date {
     align-self: flex-end;
+    font-style: italic;
+    color: #D3AA55;
+    font-family: "Noto Sans", sans-serif;
+    position: absolute;
 }
+
+.topresult .length {
+    font-style: italic;
+    font-weight: bolder;
+    color: #D3AA55;
+    font-size: 17px;
+}
+
 .thumbnail {
-    width: 11rem;
+    width: 13.5rem;
 }
 
 
@@ -60,5 +84,11 @@
     .custom-container {
     padding-left: 10px;
     padding-right: 10px;
+    }
+}
+
+@media (max-width: 710px) {
+    .topresult .date {
+        display: none;
     }
 }

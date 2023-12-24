@@ -6,7 +6,7 @@ import About from "./pages/About.jsx";
 import Libary from "./pages/Libary.jsx";
 
 function App() {
-  return (
+    return (
       <main className='bg-slate-300/20'>
           <Router>
 
